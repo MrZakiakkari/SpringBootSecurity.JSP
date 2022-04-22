@@ -7,26 +7,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/goodbye")
+public class GoodbyeController
+{
 
-public class GoodbyeController {
-  
-    @GetMapping("")
-    public String index(HttpServletRequest req) {
-      
-            return "goodbye/index";
-    
-    }
-    
- 
-    @GetMapping("english")
-    public String helloEng() {
-         return "goodbye/english";
-    }
-    
-    @GetMapping("irish")
-    public String helloIre() {
-        return  "goodbye/irish";
-    }
+	@GetMapping("")
+	public String index(HttpServletRequest req)
+	{
+		return "goodbye/index";
+	}
 
+	@GetMapping("english")
+	public String helloEng()
+	{
+		return "goodbye/english";
+	}
+
+	@GetMapping("irish")
+	public String helloIre()
+	{
+		return "goodbye/irish";
+	}
 }
-
